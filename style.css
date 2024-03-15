@@ -1,0 +1,226 @@
+* , *::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text:hsl(0, 0%, 100%);
+    --keyText : hsl(221, 14%, 31%);
+    --mainBg :hsl(222, 26%, 31%);
+    --screenBG : hsla(223, 37%, 15%, 0.605);
+    --displayBg : hsla(223, 37%, 15%, 0.712);
+    --numKeyBg : hsl(0, 0%, 100%);
+    --numeKeyShadow: grey;
+    --delsetBg : hsl(225, 21%, 49%);
+    --delsetShadow : hsl(224, 28%, 35%);
+    --equalBg :  hsl(36, 88%, 54%);
+    --equalShaow : hsl(188, 84%, 51%);
+
+
+}
+
+.theme2{
+    --text:hsl(60, 10%, 19%);
+    --keyText : hsl(221, 14%, 31%);
+    --mainBg :hsl(0, 0%, 90%);
+    --screenBG : hsl(0, 3%, 85%);
+    --displayBg : hsl(0, 3%, 85%);
+    --numKeyBg : hsl(45, 7%, 89%);
+    --numeKeyShadow: hsl(35, 11%, 61%);
+    --delsetBg : hsl(185, 42%, 37%);
+    --delsetShadow : hsl(185, 58%, 25%);
+    --equalBg :  hsl(25, 98%, 40%);
+    --equalShaow : hsl(25, 99%, 27%);
+}
+.theme3{
+    --text:hsl(52, 100%, 62%);
+    --keyText : hsl(52, 100%, 62%);
+    --mainBg :hsl(268, 75%, 9%);
+    --screenBG : hsl(268, 71%, 12%);
+    --displayBg : hsl(268, 71%, 12%);
+    --numKeyBg : hsl(281, 89%, 26%);
+    --numeKeyShadow: hsl(285, 91%, 52%);
+    --delsetBg : hsl(268, 47%, 21%);
+    --delsetShadow : hsl(290, 70%, 36%);
+    --equalBg :  hsl(176, 100%, 44%);
+    --equalShaow : hsl(177, 92%, 70%);
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width:100vw;
+    height: 100vh;
+    background-color: var(--mainBg);
+}
+.container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+    color:var(--text)
+}
+
+.heading{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.themes{
+    width: 50%;
+    justify-self: end;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.display{
+    height:4em;
+    padding: 1em 2.6em 1em 1em;
+    width: 100%;
+    background-color: var(--displayBg);   
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--text);
+    font-size: x-large;
+    font-weight: bolder;
+    position: relative;
+    border-radius: 10px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5 , 1fr);
+    row-gap: 1rem;
+    column-gap: 1.2rem;
+    width: 100%;
+    background-color: var(--screenBG);
+    padding: 2em ;
+    border-radius: 10px;
+  
+}
+.btn{
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 2.5em;
+    font-weight: 500;
+    font-size: larger;
+    background-color: var(--numKeyBg);
+    border-bottom: 3px solid var(--numeKeyShadow);
+    color:var(--keyText);
+    font-weight: bolder;
+}
+.span2{
+   grid-column: span 2
+}
+
+.reset , .del{
+    background-color: var(--delsetBg);
+    border-bottom: 3px solid var(--delsetShadow);
+    color:white
+}
+
+.equal{
+    background-color: var(--equalBg);
+    border-bottom: 3px solid var(--equalShaow);
+    color: white;
+}
+
+.line{
+    position: absolute;
+    right:2.4em;
+    width: 1px;
+    height: 50%;
+    background-color: var(--text);
+    animation: blink 400ms linear infinite;
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.display1{
+    width: 100%;
+    overflow: hidden;
+    text-align: end;
+    margin: auto;
+}
+
+label{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+label>span{
+    position: absolute;
+    top: -1.1em;
+}
+.t1{
+    all: unset;
+    height: 15px;
+    width: 15px;
+    background-color: hsl(222, 26%, 31%);
+    border-radius: 100%;
+}
+.t2{
+    all: unset;
+    height: 15px;
+    width: 15px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 100%;
+}
+
+.t3{
+    all: unset;
+    height: 15px;
+    width: 15px;
+    background-color: hsl(268, 71%, 12%);
+    border-radius: 100%;
+}
+.t1:checked{
+    border: 3px solid white;
+    height: 12px;
+    width: 12px;
+}
+
+.t2:checked{
+    border: 3px solid hsl(25, 98%, 40%);
+    height: 12px;
+    width: 12px;
+}
+.t3:checked{
+    border: 3px solid hsl(52, 100%, 62%);
+    height: 12px;
+    width: 12px;
+}
+@media screen and (max-width:900px) {
+    .container{
+        width: 90%;
+    }
+    .display{
+        padding:1em 0.8em 1em 1em
+    }
+    .line{
+        right: 0.75em;
+    }
+}

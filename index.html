@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="container">
+      <div class="header">
+        <p class="heading">Calculator</p>
+        <div class="themes">
+          <p>Theme</p>
+          <label>
+            <input type="radio" name="theme" id="1" class="t1">
+            <span>1</span>
+          </label>
+          <label>
+            <input type="radio" name="theme" id="2" class="t2">
+            <span>2</span>
+          </label>
+          <label>
+            <input type="radio" name="theme" id="3" class="t3">
+            <span>3</span>
+          </label>
+        </div>
+      </div>
+      <div class="display"><h1 class="display1"></h1><div class="line"></div></div>
+      <div class="buttons">
+        <button class="btn key">7</button>
+        <button class="btn key">8</button>
+        <button class="btn key">9</button>
+        <button class="btn del">Del</button>
+        <button class="btn key">4</button>
+        <button class="btn key">5</button>
+        <button class="btn key">6</button>
+        <button class="btn key">+</button>
+        <button class="btn key">1</button>
+        <button class="btn key">2</button>
+        <button class="btn key">3</button>
+        <button class="btn key">-</button>
+        <button class="btn key">.</button>
+        <button class="btn key">0</button>
+        <button class="btn key">/</button>
+        <button class="btn key">*</button>
+        <button class="btn span2 reset" > Reset</button>
+        <button class="btn span2 equal">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
